@@ -3,7 +3,15 @@
 <h4>Title</h4>
 <h4>Body</h4>
 
+<!--<p>Find me in app/views/books/index.html.erb</p>-->
+   <% @books.each do | book | %>
+  <p>タイトル</p>
 
+   <span>
+    <%= link_to book.title, book_path(book.id)  %>
+    </span>
+    <% end %>
+ <%= link_to "削除", destroy_book_path(@book.id) ,method: :delete, "data-confirm" => "本当に削除しますか？" %>
 
 <!--<p>Find me in app/views/books/new.html.erb</p>-->
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
