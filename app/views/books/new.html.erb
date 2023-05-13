@@ -19,6 +19,15 @@
     <%= link_to "Destroy", destroy_book_path(book.id) ,method: :delete, "data-confirm" => "本当に削除しますか？" %>
    </span>
  <% end %>
+
+ <% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 <!--<p>Find me in app/views/books/new.html.erb</p>-->
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
