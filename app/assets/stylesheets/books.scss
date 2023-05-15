@@ -1,35 +1,3 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-*{
-  font-family:serif;
-}
-
-table {
-  font-size:20px;
-}
-
-td {
-    margin:33px;
-    padding: 7px 5px 5px;
-    font-size: 15px;
-
-}
-
-.touk {
-  margin:15px;
-  padding-left:   15px;  /* 左だけ指定 */
-}
-
-.botan {
-  display:inline-block;
-  margin:10px;
-}
-
-p {
-  margin:15px;
-}
-
-.edi {
-  padding-left:20px;
-}
