@@ -29,7 +29,7 @@ class BooksController < ApplicationController
 
   def show
      @book = Book.find(params[:id])
-   
+
   end
 
   def edit
@@ -51,7 +51,7 @@ class BooksController < ApplicationController
     redirect_to book_path(@book.id)
    else
     # 保存に失敗したとき
-    flash[:alert] = "Error"
+    flash[:alert] = "errors prohibited this book from being saved:"
     @books = Book.all
     render :show
    end

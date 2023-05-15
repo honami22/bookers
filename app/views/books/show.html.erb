@@ -1,19 +1,21 @@
-<h1>Books#show</h1>
+<!--<h1>Books#show</h1>-->
 <!--<p>Find me in app/views/books/show.html.erb</p>-->
-<%= flash[:notice] %>
-<%= flash[:alert] %>
+ <%= flash[:notice] %>
+ <%= flash[:alert] %>
+ <%= form_with model: @book do |book| %>
 
-<h2>タイトル</h2>
-<%= form_with model: @book do |book| %>
+<table>
+    <tr>
+        <td><h3>Title:</h3></td>
+        <td><p><%= @book.title %></p></td>
+    <tr> <td><h3>Body:</h3></td>
+        <td> <p><%= @book.body %></p></td>
+    </tr>
+</table>
 
-
-<p><%= @book.title %></p>
-
-<h2>本文</h2>
-
-<p><%= @book.body %></p>
-
-<%= link_to "Edit",edit_book_path(@book.id) %>
-<% end %>
-
-<%= link_to "Back", "/books" %>
+<div class="botan">
+ <%= link_to "Edit",edit_book_path(@book.id) %>
+ <% end %>
+ |
+ <%= link_to "Back", "/books" %>
+</div>
